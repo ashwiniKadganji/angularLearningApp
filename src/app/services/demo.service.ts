@@ -1,8 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DemoService {
 
   products = [
@@ -12,9 +15,10 @@ export class DemoService {
     { id : 4,name : 'sql', education : 'Computer Science', address : 'Pune',state : 'Maharashtra'},
     {  id : 5,name : 'html', education : 'Computer Science', address : 'Pune',state : 'Maharashtra'}
   ]
-  constructor() { }
+  constructor(private _httpClient: HttpClient) { }
 
   getProducts(){
        return this.products;
   }
+
 }

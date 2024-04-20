@@ -18,4 +18,8 @@ export class JsonplaceholderService {
   getPhotos(): Observable<any>{
    return this._httpClient.get(`${this.apiUrl}/photos`);
   }
+
+  createNewPost(body: any): Observable <any>{
+    return this._httpClient.post(`${this.apiUrl}/posts`,body);
+  }
 }

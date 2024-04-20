@@ -7,10 +7,10 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class UtilityService {
   // send the data one compoennt to another compoenent using subject and behaviour subject means special kind of observable with service
 
-  // userName =  new Subject<any>;
+  // userName =  new Subject<any>();
 
   // behaviour subject used for set the initial value
-  userName =  new BehaviorSubject('Ashu');
+  userName =  new BehaviorSubject('Angular');
 
   constructor() { }
 

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3">
+            <label for="">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Name" #uname >
+        </div>
+        <div class="col-md-4 mt-4 ">
+            <button class="btn btn-success" (click)="create()">create</button>
+        </div>
+
+        <table class="table table-active mt-3 ">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of data">
+                    <td>{{p.id}}</td>
+                    <td>{{p.name}}</td>
+                    <td>
+                        <button class="btn btn-warning" (click)="update(id)">Edit</button>
+                        <button class="btn btn-danger" >Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
